@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mekdela Amba Visitor Portal</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#1e1e1e;
+color:white;
+text-align:center;
+}
+
+header{
+background:#111;
+padding:20px;
+}
+
+h1{
+margin:0;
+color:#ffcc00;
+}
+
+nav{
+margin-top:20px;
+}
+
+button{
+padding:12px 20px;
+margin:5px;
+font-size:16px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background:#ff4d4d;
+color:white;
+}
+
+button:hover{
+background:#ff1a1a;
+}
+
+.section{
+display:none;
+padding:30px;
+max-width:800px;
+margin:auto;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin-top:8px;
+border-radius:5px;
+border:none;
+}
+
+.submit{
+margin-top:15px;
+background:#00cc66;
+}
+
+#confirmation{
+display:none;
+margin-top:20px;
+color:#00ffcc;
+font-weight:bold;
+font-size:18px;
+}
+
+.card{
+background:#333;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Mekdela Amba Visitor Portal Prepered by Biruk Leul</h1>
+
+<nav>
+
+<button onclick="showSection('uni')">
+About Mekdela Amba University
+</button>
+
+<button onclick="showSection('city')">
+About Gimba City
+</button>
+
+<button onclick="showSection('book')">
+Book Your Visit
+</button>
+
+</nav>
+
+</header>
+
+
+<!-- UNIVERSITY SECTION -->
+
+<div id="uni" class="section">
+
+<h2>Mekdela Amba University</h2>
+
+<div class="card">
+<p>
+
+Mekdela Amba University is located in the historic area of Mekdela Amba near Gimba.
+
+This place is historically important in Ethiopian history because Emperor Tewodros II ended his life here while defending Ethiopia.
+
+The university is surrounded by beautiful mountains, historical sites, and cultural heritage.
+
+Visitors can explore:
+</p>
+
+<ul style="text-align:left">
+
+<li>Historic Mekdela mountain</li>
+<li>The site connected to Emperor Tewodros II</li>
+<li>The university campus</li>
+<li>Beautiful landscapes</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- CITY SECTION -->
+
+<div id="city" class="section">
+
+<h2>About Gimba City</h2>
+
+<div class="card">
+
+<p>
+
+Gimba is a peaceful town located near Mekdela Amba.
+
+The area is known for its historic heritage, beautiful mountains, and cultural traditions.
+
+Visitors who come here can experience:
+
+</p>
+
+<ul style="text-align:left">
+
+<li>Historic sites of Emperor Tewodros II</li>
+<li>Local Ethiopian culture</li>
+<li>Beautiful mountain views</li>
+<li>Traditional foods</li>
+
+</ul>
+
+<p>
+
+Visitors can book tours to explore both Mekdela Amba University and Gimba city attractions.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BOOKING SECTION -->
+
+<div id="book" class="section">
+
+<h2>Book Your Visit</h2>
+
+<form id="bookingForm">
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Phone Number</label>
+<input type="text" required>
+
+<label>Visit Date</label>
+<input type="date" required>
+
+<label>Visit Category</label>
+
+<select required>
+
+<option>University Tour</option>
+<option>City Tour</option>
+<option>University + City Tour</option>
+
+</select>
+
+<label>Special Request</label>
+
+<textarea rows="3"></textarea>
+
+<button class="submit" type="submit">
+Book Now
+</button>
+
+</form>
+
+<div id="confirmation">
+
+✅ Booking recorded!
+
+Please take a screenshot of this page and send it to:
+
+Telegram: @rukvayne
+
+</div>
+
+</div>
+
+
+<script>
+
+function showSection(section){
+
+document.querySelectorAll(".section").forEach(s=>{
+s.style.display="none"
+})
+
+document.getElementById(section).style.display="block"
+
+}
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+document.getElementById("confirmation").style.display="block"
+
+})
+
+</script>
+
+</body>
+
+</html>
